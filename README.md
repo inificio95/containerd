@@ -90,6 +90,11 @@ version = 2
   # Set to "debug" for verbose logging during local development
   # Note: keeping this at "debug" locally to help trace issues while learning the codebase
   level = "debug"
+
+[metrics]
+  # Exposing metrics locally for observability experiments
+  # See: https://prometheus.io/docs/guides/go-application/
+  address = "127.0.0.1:1338"
 ```
 
 ## Architecture
@@ -98,30 +103,5 @@ containerd is designed to be embedded into a larger system. It exposes its API o
 
 ```
 +-------------+
-|   clients   |  (ctr, Docker, Kubernetes via CRI)
-+------+------+
-       |
-       | gRPC
-       |
-+------v------+
-| containerd  |
-|   daemon    |
-+------+------+
+|   clients   |  (ctr, Docker, Ku
 ```
-
-You forked this project for personal use/learning. Make a small, realistic customization. Choose ONE of:
-- Tweak a configuration value or default setting
-- Add a brief comment or personal note
-- Fix a minor issue you noticed
-- Adjust a parameter default or behavior
-- Update/add to the documentation
-
-IMPORTANT: Keep changes minimal (3-15 lines changed). This is a personal customization, not a rewrite.
-
-Return ONLY a JSON object:
-{
-  "content": "the FULL updated file content",
-  "commit_message": "conventional style commit message"
-}
-
-Return ONLY valid JSON.
