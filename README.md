@@ -79,6 +79,10 @@ version = 2
   [plugins."io.containerd.grpc.v1.cri"]
     [plugins."io.containerd.grpc.v1.cri".containerd]
       default_runtime_name = "runc"
+
+[debug]
+  # Set to "debug" for verbose logging during local development
+  level = "info"
 ```
 
 ## Architecture
@@ -110,15 +114,3 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 
 Before submitting a PR:
 - Run `make lint` to check for style issues
-- Ensure all tests pass with `make test`
-- Add tests for new functionality
-
-## License
-
-containerd is licensed under the [Apache 2.0 License](LICENSE).
-
-## Community
-
-- **Slack**: [#containerd](https://cloud-native.slack.com/messages/containerd) on CNCF Slack
-- **Mailing List**: [containerd-dev](https://groups.google.com/forum/#!forum/containerd-dev)
-- **Issues**: [GitHub Issues](https://github.com/containerd/containerd/issues)
