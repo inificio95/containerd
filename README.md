@@ -82,7 +82,8 @@ version = 2
 
 [debug]
   # Set to "debug" for verbose logging during local development
-  level = "info"
+  # Note: keeping this at "debug" locally to help trace issues while learning the codebase
+  level = "debug"
 ```
 
 ## Architecture
@@ -110,7 +111,4 @@ runtimes  snapshots
 
 ## Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-Before submitting a PR:
-- Run `make lint` to check for style issues
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTIN
