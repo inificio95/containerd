@@ -61,6 +61,9 @@ make test
 
 # Run integration tests (requires root)
 sudo make integration
+
+# Run a specific test by name
+sudo make integration TESTFLAGS="-run TestContainerCreate"
 ```
 
 ## Configuration
@@ -106,9 +109,5 @@ containerd is designed to be embedded into a larger system. It exposes its API o
   |         |
   v         v
 runtimes  snapshots
-(runc)    (overlayfs)
+(runc)    (overlay
 ```
-
-## Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTIN
