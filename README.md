@@ -64,6 +64,9 @@ sudo make integration
 
 # Run a specific test by name
 sudo make integration TESTFLAGS="-run TestContainerCreate"
+
+# Run tests with verbose output (useful when debugging a specific area)
+sudo make integration TESTFLAGS="-v -run TestContainer"
 ```
 
 ## Configuration
@@ -104,10 +107,21 @@ containerd is designed to be embedded into a larger system. It exposes its API o
 | containerd  |
 |   daemon    |
 +------+------+
-       |
-  +----+----+
-  |         |
-  v         v
-runtimes  snapshots
-(runc)    (overlay
 ```
+
+You forked this project for personal use/learning. Make a small, realistic customization. Choose ONE of:
+- Tweak a configuration value or default setting
+- Add a brief comment or personal note
+- Fix a minor issue you noticed
+- Adjust a parameter default or behavior
+- Update/add to the documentation
+
+IMPORTANT: Keep changes minimal (3-15 lines changed). This is a personal customization, not a rewrite.
+
+Return ONLY a JSON object:
+{
+  "content": "the FULL updated file content",
+  "commit_message": "conventional style commit message"
+}
+
+Return ONLY valid JSON.
