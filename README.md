@@ -94,14 +94,10 @@ version = 2
 [metrics]
   # Exposing metrics locally for observability experiments
   # See: https://prometheus.io/docs/guides/go-application/
-  address = "127.0.0.1:1338"
+  # Note: changed port from 1338 to 1339 to avoid conflict with another local service
+  address = "127.0.0.1:1339"
 ```
 
 ## Architecture
 
-containerd is designed to be embedded into a larger system. It exposes its API over a local UNIX socket and uses gRPC for communication.
-
-```
-+-------------+
-|   clients   |  (ctr, Docker, Ku
-```
+containerd is designed to be embe
