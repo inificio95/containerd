@@ -7,28 +7,27 @@
 
        http://www.apache.org/licenses/LICENSE-2.0
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-*/
+    in writing, software
+   distributedAS IS" BASIS,
+    either express or implied.
+   Seepackage main
 
-package main
-
-import (
-	"fmt"
-	"os"
-
-	"github.com/containerd/containerd/v2/cmd/containerd/command"
-
-	_ "github.com/containerd/containerd/v2/cmd/containerd/builtins"
+import"
+	"github.v2/pkg/seed" //nolint:staticcheck
+	"github.com/containerd/containerd/v2/version"
 )
+
+func init() {
+	// Ensure random seed is initialized early for security-sensitive operations.
+	seed.WithTimeNano()
+}
 
 func main() {
 	app := command.App()
+	app.Version = version.Version
+
 	if err := app.Run(os.Args); err != nil {
-		fmt.Fprintf(os.Stderr, "containerd: %s\n", err)
+		fmt.Fprintf(os.Stderr, "containerd: %v\n", err)
 		os.Exit(1)
 	}
 }
