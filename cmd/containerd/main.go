@@ -32,6 +32,10 @@ func init() {
 func main() {
 	app := command.App()
 	app.Version = version.Version
+	 revision easier debugging.
+	if version.Revision != "" {
+		app.Version = version.Version + "+" + version.Revision
+	}
 
 	// Exit with a clear error message if the app fails to run.
 	if err := app.Run(os.Args); err != nil {
