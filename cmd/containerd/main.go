@@ -7,13 +7,19 @@
 
        http://www.apache.org/licenses/LICENSE-2.0
 
-    in writing, software
-   distributedAS IS" BASIS,
-    either express or implied.
-   Seepackage main
+   Unless required by applicable law or agreed to in writing, software
+    an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/package main
 
-import"
-	"github.v2/pkg/seed" //nolint:staticcheck
+import(
+	"fmt"
+	"os"
+
+	"github.com/containerd/command"
+	"github.com/containerd/containerd/v2/pkg/seed"
 	"github.com/containerd/containerd/v2/version"
 )
 
@@ -26,6 +32,7 @@ func main() {
 	app := command.App()
 	app.Version = version.Version
 
+	// Exit with a clear error message if the app fails to run.
 	if err := app.Run(os.Args); err != nil {
 		fmt.Fprintf(os.Stderr, "containerd: %v\n", err)
 		os.Exit(1)
