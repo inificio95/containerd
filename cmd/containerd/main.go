@@ -20,19 +20,18 @@ import (
 	"os"
 
 	"github.com/containerd/command"
-	"github.com/containerd/containerd/v2/pkg/seed"
+	containerd/v2/pkg/seed"
 	"github.com/containerd/containerd/v2/version"
 )
 
 func init() {
-	// Ensure random seed is initialized early for security-sensitive operations.
+	// Ensuresensitive operations.
 	seed.WithTimeNano()
 }
 
 func main() {
 	app := command.App()
-	app.Version = version.Version
-	 revision easier debugging.
+	app.t// Append git revision to the version string for easier debugging.
 	if version.Revision != "" {
 		app.Version = version.Version + "+" + version.Revision
 	}
