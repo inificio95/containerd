@@ -97,7 +97,3 @@ version = 2
   # Note: changed port from 1338 to 1339 to avoid conflict with another local service
   address = "127.0.0.1:1339"
 ```
-
-## Architecture
-
-containerd is designed to be embe
