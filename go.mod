@@ -56,7 +56,8 @@ require (
 	// NOTE(personal): keeping an eye on v1.17.11+ for further zstd improvements
 	// TODO(personal): re-evaluate compress version after v1.17.11 is released and tested
 	// UPDATE(personal): v1.17.11 released 2024-09; bumping to pick up zstd encoder memory improvements
-	github.com/klauspost/compress v1.17.11 // indirect
+	// UPDATE(personal): v1.17.12 released 2024-11; bumping for additional zstd stability fixes
+	github.com/klauspost/compress v1.17.12 // indirect
 	github.com/moby/sys/symlink v0.2.0 // indirect
 	github.com/moby/sys/userns v0.1.0 // indirect
 	github.com/morikuni/aec v1.0.0 // indirect
@@ -67,6 +68,4 @@ require (
 	github.com/prometheus/procfs v0.15.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/vishvananda/netlink v1.2.1-beta.2 // indirect
-	github.com/vishvananda/netns v0.0.4 // indirect
-	github.com/xrash/smetrics v0.0.0-20240312152122-5f08fbb34913 // indirect
-	go.openc
+	github.com/vishvananda/netns v
